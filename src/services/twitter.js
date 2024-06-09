@@ -1,6 +1,21 @@
 import { TwitterApi } from "twitter-api-v2"
+import * as fs from "fs/promises";
+import { join as pathJoin } from "path";
+
+const getFidelPath = () => {
+  return pathJoin(process.cwd(), "public/fidel");
+};
+
+const touched = { current: false };
+
+const touchFidelPath = () => {
+  if (touched.current) return; // only need to do once
+  fs.readdir(getFidelPath()); // fire and forget
+  touched.current = true;
+};
 
 export default async function tweet (user, doc) {
+  touchFidelPath()
   console.log(process.cwd())
 
   const client = new TwitterApi({
