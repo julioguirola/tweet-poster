@@ -92,7 +92,7 @@ export default function Home() {
 
     async function getInitialData () {
       const content_data = await fetch(url_endpoint + "resources", {
-        cache: "no-cache"
+        cache: "no-store"
       })
       const {res_data} = await content_data.json()
 
