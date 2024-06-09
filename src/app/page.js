@@ -91,7 +91,9 @@ export default function Home() {
     setIsLoading(true);
 
     async function getInitialData () {
-      const content_data = await fetch(url_endpoint + "resources")
+      const content_data = await fetch(url_endpoint + "resources", {
+        cache: "no-cache"
+      })
       const {res_data} = await content_data.json()
 
       const user_data = await fetch(url_endpoint + "users")
