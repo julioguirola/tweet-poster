@@ -4,7 +4,9 @@ import ResSelector from "@/components/ResSelector";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./page.css"
-const url_endpoint = "http://localhost:3000/"
+
+//const url_endpoint = "http://localhost:3000/"
+const url_endpoint = "https://tweet-poster.vercel.app/"
 
 export default function Home() {
   const [tipoPub, setTipoPub] = useState("All")
