@@ -1,0 +1,34 @@
+:root {
+	--back: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--back: #202b38;
+	}
+}
+
+header img {
+	width: 80px;
+	border-radius: 50%;
+}
+
+header {
+	background: var(--back);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	gap: 20px;
+}
+
+header > div {
+	gap: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-evenly;
+}

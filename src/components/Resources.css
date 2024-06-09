@@ -1,0 +1,10 @@
+article {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.buttons {
+	align-self: end;
+}
