@@ -45,6 +45,22 @@ export default function Home() {
     }
   }
 
+  const updateBD = async (id) => {
+    setIsLoading(true);
+    try {
+      await fetch(url_endpoint + "up_data", {
+        headers: {
+          "Content-Type": "application/json"
+        },
+        method: "POST"
+      })
+      alert("Listo!")
+      setIsLoading(false);
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
   const deleteC = async (id) => {
     setIsLoading(true)
     const params = {
@@ -94,6 +110,7 @@ export default function Home() {
       <Header handleChangeTipo={setTipoPub} 
               users={usuarios} 
               handleChangeUser={setUsuarioactual}
+              actualizar={updateBD}
               />
       <main>
       {

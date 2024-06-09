@@ -1,6 +1,6 @@
 import "./Header.css"
 
-export default function ({handleChangeTipo, users, handleChangeUser}) {
+export default function ({handleChangeTipo, users, handleChangeUser, actualizar}) {
   	
 
 	return (
@@ -30,7 +30,7 @@ export default function ({handleChangeTipo, users, handleChangeUser}) {
 	                <option value="Event">Efeméride</option>              
 	              </select>
 	            </label>
-	            <button>Actualizar Base de Datos</button>
+	            <button onClick={actualizar} >Actualizar Base de Datos</button>
 	          </div>
 		</header>
 		)
