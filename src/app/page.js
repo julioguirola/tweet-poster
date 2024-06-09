@@ -89,6 +89,7 @@ export default function Home() {
 
   useEffect(() => {
     setIsLoading(true);
+    console.log("useEffect")
 
     async function getInitialData () {
       const content_data = await fetch(url_endpoint + "resources", {
