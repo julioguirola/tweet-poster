@@ -48,6 +48,7 @@ export default async function tweet (user, doc) {
     }
   } catch (e) {
     console.log(e)
+    return
   }
 }
 
