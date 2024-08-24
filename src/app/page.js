@@ -54,6 +54,14 @@ export default function Home() {
         },
         method: "POST"
       })
+
+      const content_data = await fetch(url_endpoint + "resources", {
+        cache: "no-store"
+      })
+      const {res_data} = await content_data.json()
+
+
+      setContenido(res_data)
       alert("Listo!")
       setIsLoading(false);
     } catch (e) {
